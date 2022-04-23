@@ -1,5 +1,6 @@
 const User=require('../models/user')
 const bcryptjs=require('bcryptjs')
+const jwt=require('jsonwebtoken')
 
 const userController={}
 
@@ -53,7 +54,16 @@ userController.login=((req,res)=>{
         bcryptjs.compare(body.password,user.password) 
         .then((match)=>{
             if(match){
-                res.json(user)
+                const tokenData={
+                    _id:user._id,
+                    email:user.email,
+                    userName:user.userName
+                }
+               const token= jwt.sign(tokenData,'token',{expiresIn:'1d'})
+
+                res.json({
+                    token:`Bearer ${token}`
+                })
             }else{
                 res.json({errors:'invalid email or password'})
             }
