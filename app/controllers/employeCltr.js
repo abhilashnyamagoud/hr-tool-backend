@@ -36,7 +36,29 @@ employeCltr.show=((req,res)=>{
     })
 })
 
+employeCltr.remove=((req,res)=>{
+    const id=req.params.id
+    Employe.findByIdAndDelete(id)
+    .then((emp)=>{
+        res.json(emp)
+    })
+    .catch((err)=>{
+        res.json(err)
+    })
+})
 
+employeCltr.update=((req,res)=>{
+    const id=req.params.id
+    const body=req.body
+    Employe.findByIdAndUpdate(id,body,{new:true,runValidators:true})
+    .then((emp)=>{
+        res.json(emp)
+    })
+    .catch((err)=>{
+        res.json(err)
+    })
+
+})
 
 
 module.exports=employeCltr
