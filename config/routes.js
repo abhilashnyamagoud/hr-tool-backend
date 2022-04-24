@@ -7,6 +7,7 @@ const {authenticateUser}=require('../app/middlewares/authentication')
 const taskCltr=require('../app/controllers/taskCltr')
 const todoCltr=require('../app/controllers/todoCltr')
 const leaveCltr=require('../app/controllers/leaveCltr')
+const projectCltr=require('../app/controllers/projectCltr')
 
     //Routes for employes
     //for get all employes
@@ -69,5 +70,17 @@ const leaveCltr=require('../app/controllers/leaveCltr')
   router.put('/leaveManagement/:id',leaveCltr.update)
 
   router.delete('/leaveManagement/:id',leaveCltr.delete)
+
+  //routes for project management
+
+  router.get('/projects/all',projectCltr.list)
+
+  router.post('/projects/create',projectCltr.create)
+
+  router.get('/projects/:id',projectCltr.show)
+
+  router.put('/projects/:id',projectCltr.update)
+
+  router.delete('/projects/:id',projectCltr.remove)
 
 module.exports =router
