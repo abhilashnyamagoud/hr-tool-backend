@@ -20,5 +20,5 @@ Rest Apis
 
 8. Delete single User - localhost:3088/api/employes/id      ,Method -Delete
 
-
+9. Get Account info after login - localhost:3088/users/account    ,Method -get need to provide Bearer token in header while request.
  
