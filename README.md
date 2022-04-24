@@ -43,6 +43,10 @@ for Task-{
     "completed":boolen 
 }
 
+for Todo-{
+    "todo":"String"
+}
+
 
  1. Registration user for the software - localhost:3088/users/register   ,Method- Post
  
