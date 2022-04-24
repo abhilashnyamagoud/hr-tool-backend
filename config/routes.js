@@ -5,6 +5,7 @@ const employeCltr=require('../app/controllers/employeCltr')
 const userController=require('../app/controllers/usersCltr')
 const {authenticateUser}=require('../app/middlewares/authentication')
 const taskCltr=require('../app/controllers/taskCltr')
+const todoCltr=require('../app/controllers/todoCltr')
 
     //Routes for employes
     //for get all employes
@@ -49,4 +50,11 @@ const taskCltr=require('../app/controllers/taskCltr')
 
   router.get('/tasks/:id',taskCltr.show)
 
+  //routes for todo
+
+  router.get('/todo/all',todoCltr.list)
+
+  router.post('/todo/add',todoCltr.create)
+
+  router.delete('/todo/:id',todoCltr.delete)
 module.exports =router
