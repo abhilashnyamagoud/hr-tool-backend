@@ -71,4 +71,10 @@ for Task-{
 13. delete single task - localhost:3088/tasks/id  , method -delete
 
 14. get single task - localhost:3088/tasks/id   ,method - get
+
+15. get all todo list- localhost:3088/todo/all  ,method - get
+
+16. create todo - localhost:3088/todo/add  ,method-post
+
+17. delete todo - localhost:3088/todo/id  ,method-delete
  
