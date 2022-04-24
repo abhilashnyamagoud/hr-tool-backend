@@ -36,6 +36,12 @@ for Login-{
     "password":"String"
 }
 
+for Task-{
+    "title":"String",
+    "description":"String",
+    "dueDate":"yyyy-mm-dd",
+    "completed":boolen 
+}
 
 
  1. Registration user for the software - localhost:3088/users/register   ,Method- Post
@@ -55,4 +61,14 @@ for Login-{
 8. Delete single User - localhost:3088/api/employes/id      ,Method -Delete
 
 9. Get Account info after login - localhost:3088/users/account    ,Method -get need to provide Bearer token in header while request.
+
+10. Get all the tasks - localhost:3088/tasks/all    ,Method- Get 
+
+11. create new Task -localhost:3088/tasks/add    ,method -post
+
+12. update single task - localhost:3088/tasks/id    ,method - put
+
+13. delete single task - localhost:3088/tasks/id  , method -delete
+
+14. get single task - localhost:3088/tasks/id   ,method - get
  
