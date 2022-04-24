@@ -2,7 +2,41 @@
 
 Backend for employee management tool
 
+Base URl- localhost:3088/
+
 Rest Apis
+
+ Employee Data format-{
+   {
+    "fullName":"String",
+    "employesId":"number",
+    "orgEmail":"String",
+    "designation":"String",
+    "department":"String",
+    "manager":"String",
+    "location":"String",
+    "joinedDate":"yyyy-mm-dd",
+    "dob":"yyyy-mm-dd",
+    "education":"String",
+    "mobile":"Number"
+}
+
+User Data format 
+for Register- {
+    "email":"String",
+    "firstName":"String",
+    "lastName":"String",
+    "mobileNumber":"String",
+    "password":"String",
+    "userName":"aString"
+
+}
+for Login-{
+    "email":"String",
+    "password":"String"
+}
+
+
 
  1. Registration user for the software - localhost:3088/users/register   ,Method- Post
  
