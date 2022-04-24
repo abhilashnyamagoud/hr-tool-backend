@@ -57,6 +57,14 @@ for LeaveManagement-{
     "remarks":"String"
 }
 
+for projects-{
+    "projectName":"String",
+    "clientName":"String",
+    "deadLine":"yyyy-mm-dd",
+    "status":"string",
+    "teamMembers":Array
+}
+
  1. Registration user for the software - localhost:3088/users/register   ,Method- Post
  
  2. Login User- localhost:3088/users/login    ,Method - Post
@@ -98,4 +106,14 @@ for LeaveManagement-{
 20. update leave - localhost:3088/leaveManagement/id , method-put
 
 21. delete leave request- localhost:3088/leaveManagement/id , method-delete
+
+22. Get all the projects - localhost:3088/projects/all ,method- get
+
+23. create new project- localhost:3088/projects/create ,method-post
+
+24. get single project localhost:3088/projects/id ,method-get
+
+25. update single project localhost:3088/projects/id , method-put
+
+26. delete single project localhost:3088/projects/id , method-delete
  
