@@ -4,6 +4,7 @@ const router=express.Router()
 const employeCltr=require('../app/controllers/employeCltr')
 const userController=require('../app/controllers/usersCltr')
 const {authenticateUser}=require('../app/middlewares/authentication')
+const taskCltr=require('../app/controllers/taskCltr')
 
     //Routes for employes
     //for get all employes
@@ -34,5 +35,18 @@ const {authenticateUser}=require('../app/middlewares/authentication')
   //get account info
 
   router.get('/users/account',authenticateUser,userController.account)
+
+
+  //routes for Task
+
+  router.get('/tasks/all',taskCltr.list)
+
+  router.post('/tasks/add',taskCltr.create)
+
+  router.put('/tasks/:id',taskCltr.update)
+
+  router.delete('/tasks/:id',taskCltr.delete)
+
+  router.get('/tasks/:id',taskCltr.show)
 
 module.exports =router
