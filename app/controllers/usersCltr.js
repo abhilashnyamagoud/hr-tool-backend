@@ -72,5 +72,9 @@ userController.login=((req,res)=>{
     })
 })
 
+userController.account=((req,res)=>{
+        res.json(req.user)
+})
+
 
 module.exports=userController

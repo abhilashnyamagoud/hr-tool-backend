@@ -3,6 +3,7 @@ const express=require('express')
 const router=express.Router()
 const employeCltr=require('../app/controllers/employeCltr')
 const userController=require('../app/controllers/usersCltr')
+const {authenticateUser}=require('../app/middlewares/authentication')
 
     //Routes for employes
     //for get all employes
@@ -27,6 +28,11 @@ const userController=require('../app/controllers/usersCltr')
   //for get all users
   router.get('/users',userController.list)
 
+  //login URL
   router.post('/users/login',userController.login)
+
+  //get account info
+
+  router.get('/users/account',authenticateUser,userController.account)
 
 module.exports =router
