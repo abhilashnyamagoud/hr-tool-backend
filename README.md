@@ -47,6 +47,15 @@ for Todo-{
     "todo":"String"
 }
 
+for LeaveManagement-{
+    "firstName":"String",
+    "lastName":"String",
+    "employeeId":number,
+    "leaveType":"String",
+    "fromDate":"yyyy-mm-dd",
+    "toDate":"yyyy-mm-dd",
+    "remarks":"String"
+}
 
  1. Registration user for the software - localhost:3088/users/register   ,Method- Post
  
@@ -81,4 +90,12 @@ for Todo-{
 16. create todo - localhost:3088/todo/add  ,method-post
 
 17. delete todo - localhost:3088/todo/id  ,method-delete
+
+18. get all leaves- localhost:3088/leaveManagement/leaves  , method-get
+
+19. add leave request - localhost:3088/leaveManagement/add , method-post
+
+20. update leave - localhost:3088/leaveManagement/id , method-put
+
+21. delete leave request- localhost:3088/leaveManagement/id , method-delete
  
