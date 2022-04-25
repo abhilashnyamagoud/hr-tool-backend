@@ -24,11 +24,8 @@ Rest Apis
 User Data format 
 for Register- {
     "email":"String",
-    "firstName":"String",
-    "lastName":"String",
-    "mobileNumber":"String",
     "password":"String",
-    "userName":"aString"
+    "userName":"String"
 
 }
 for Login-{
