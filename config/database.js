@@ -1,7 +1,7 @@
 const mongoose=require('mongoose')
 
 const configureDB=()=>{
-    mongoose.connect('mongodb://localhost:27017/employesData')
+    mongoose.connect('mongodb://localhost:27017/Hr-tool-Data')
     .then(()=>{
         console.log('Connected to DB')
     })
