@@ -24,11 +24,8 @@ Rest Apis
 User Data format 
 for Register- {
     "email":"String",
-    "firstName":"String",
-    "lastName":"String",
-    "mobileNumber":"String",
     "password":"String",
-    "userName":"aString"
+    "userName":"String"
 
 }
 for Login-{
@@ -63,6 +60,13 @@ for projects-{
     "deadLine":"yyyy-mm-dd",
     "status":"string",
     "teamMembers":Array
+}
+
+for holiday-{
+    "title":"String",
+    "type":"String",
+    "date":"yyyy-mm-dd",
+    "details":"string"
 }
 
  1. Registration user for the software - localhost:3088/users/register   ,Method- Post
@@ -116,4 +120,14 @@ for projects-{
 25. update single project localhost:3088/projects/id , method-put
 
 26. delete single project localhost:3088/projects/id , method-delete
+
+27. get all holidays- localhost:3088/holidays/all ,method-get
+
+28. create new holiday - localhost:3088/holidays/add ,method- post
+
+29. get single holiday - localhost:3088/holidays/id ,methos-get
+
+30. update holiday - localhost:3088/holidays/id , method - put
+
+31. delete holiday - localhost:3088/holidays/id , method - delete
  
