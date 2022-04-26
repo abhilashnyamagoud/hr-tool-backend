@@ -1,7 +1,13 @@
 const mongoose=require('mongoose')
 
+const CONNECTION_URI = process.env.MONGODB_URI ||`mongodb://localhost:27017/employesData`
+
 const configureDB=()=>{
-    mongoose.connect('mongodb://localhost:27017/employesData')
+    mongoose.connect(CONNECTION_URI,{
+        useNewUrlParser: true, 
+        useUnifiedTopology: true, 
+        useCreateIndex: true
+    })
     .then(()=>{
         console.log('Connected to DB')
     })
