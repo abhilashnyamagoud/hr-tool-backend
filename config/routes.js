@@ -9,6 +9,7 @@ const todoCltr=require('../app/controllers/todoCltr')
 const leaveCltr=require('../app/controllers/leaveCltr')
 const projectCltr=require('../app/controllers/projectCltr')
 const holidayCltr=require('../app/controllers/holidayCltr')
+const eventCltr=require('../app/controllers/eventCltr')
 
 
     //Routes for employes
@@ -97,5 +98,13 @@ const holidayCltr=require('../app/controllers/holidayCltr')
   router.put('/holidays/:id',holidayCltr.update)
 
   router.delete('/holidays/:id',holidayCltr.delete)
+
+  router.get('/events/all',eventCltr.list)
+
+  router.post('/events/add',eventCltr.add)
+
+  router.put('/events/:id',eventCltr.update)
+
+  router.delete('/events/:id',eventCltr.delete)
 
 module.exports =router
