@@ -10,6 +10,7 @@ const leaveCltr=require('../app/controllers/leaveCltr')
 const projectCltr=require('../app/controllers/projectCltr')
 const holidayCltr=require('../app/controllers/holidayCltr')
 
+
     //Routes for employes
     //for get all employes
   router.get('/api/employes',employeCltr.list)

@@ -1,14 +1,22 @@
 
 const express=require('express')
-const app=express()
+const bodyParser = require('body-parser');
 const cors=require('cors')
-const router=require('./config/routes')
+
+const app=express()
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json());
 //application level middleware
 app.use(express.json())
+var corsOptions = {
+    origin: "*"
+};
+app.use(cors(corsOptions));
+const router=require('./config/routes')
 app.use(router)
-app.use(cors())
 
-const port=3088
+
+const port=process.env.PORT ||3088
 const configureDB=require('./config/database')
 
     
