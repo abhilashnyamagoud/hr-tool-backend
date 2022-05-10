@@ -22,9 +22,9 @@ const TaskSchema=new Schema({
         default:Date.now()
     },
     status:{
-        type:String,
+        type:Boolean,
         required:true,
-        default: "Progress"
+        default: false
     }
 })
 
