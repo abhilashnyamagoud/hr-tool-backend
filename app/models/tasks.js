@@ -14,15 +14,18 @@ const TaskSchema=new Schema({
         required:true
     },
     dueDate:{
-        type:Date
+        type:String,
+        default:"No Due date"
     },
     createdAt:{
         type:Date,
         default:Date.now()
     },
-     completed:{
-         type:Boolean
-     }
+    status:{
+        type:String,
+        required:true,
+        default: "Progress"
+    }
 })
 
 const Task=mongoose.model('Task',TaskSchema)

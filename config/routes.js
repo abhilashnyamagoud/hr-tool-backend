@@ -99,6 +99,8 @@ const eventCltr=require('../app/controllers/eventCltr')
 
   router.delete('/holidays/:id',holidayCltr.delete)
 
+  //Events
+
   router.get('/events/all',eventCltr.list)
 
   router.post('/events/add',eventCltr.add)
